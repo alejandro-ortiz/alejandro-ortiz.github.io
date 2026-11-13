@@ -2,55 +2,185 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/my_website.css">
-    <script src="javascript.js"></script>
-    <title>Alex Ortiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Alejandro Ortiz</title>
+  <meta name="description" content="Alejandro Ortiz is a U.S. Coast Guard Academy cadet and cybersecurity competitor who builds practical web tools.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alejandro Ortiz">
+  <meta property="og:description" content="U.S. Coast Guard Academy cadet, cybersecurity competitor, and developer.">
+  <meta property="og:url" content="https://aortiz.org/">
+  <meta property="og:image" content="https://aortiz.org/images/alex.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <header id="changedropdown">
-        <div class="dropdown" id="dropdown">
-            <button onclick="dropDownFunction(this)" class="dropbtn" id="dropdownbutton">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="/index">Home</a>
-              <a href="/about">About</a>
-              <a href="/tennis">Tennis</a>
-              <a href="/coding">Coding</a>
-              <a href="/point-tracker">Point-Tracker</a>
-            </div>
+  <nav>
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand">Alejandro <span>Ortiz</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#academy">Academy</a>
+        <a href="#projects">Projects</a>
+        <a href="#beyond">Beyond</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" class="masthead">
+    <div class="wrap masthead-grid">
+      <div>
+        <p class="eyebrow">Coast Guard Academy &middot; New London, CT</p>
+        <h1>Alejandro Ortiz</h1>
+        <p class="lede">Cadet at the Coast Guard Academy. I compete in cybersecurity, build useful tools, and train hard on and off the mat.</p>
+        <div class="chips">
+          <span class="chip">USCGA Cadet</span>
+          <span class="chip">Cybersecurity</span>
+          <span class="chip">Eagle Scout</span>
+          <span class="chip">Developer</span>
+        </div>
+      </div>
+      <div class="portrait">
+        <img src="images/alex.jpg" alt="Alejandro Ortiz">
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <p class="eyebrow">About</p>
+      <p>I'm a cadet at the United States Coast Guard Academy, where I compete on the Academy's cyber team. Cybersecurity is my main focus, and I also build web tools that make cadet life a little easier.</p>
+      <p class="muted">Outside of cyber, I've played tennis for seven years, trained Muay Thai for the last two, and spent most of my youth in Scouting, where I grew up through leadership in the Order of the Arrow. The constant across all of it is simple: put in the reps, lead when it's my turn, and build things people actually use.</p>
+    </div>
+  </section>
+
+  <section id="academy" class="academy">
+    <div class="wrap">
+      <div class="academy-head">
+        <p class="eyebrow">At the Academy</p>
+        <h2>Competing on the USCGA cyber team</h2>
+        <p>At the Coast Guard Academy I train and compete in cybersecurity, from Capture the Flag events to the National Cyber League, alongside a full cadet schedule. It's the work I care about most and where I spend the bulk of my time.</p>
+      </div>
+      <div class="cyber">
+        <div class="card cyber-main">
+          <h3>Cyber competition and CTFs</h3>
+          <p>I compete in CTFs and play every National Cyber League season, consistently scoring near the top of the field. The challenges span web exploitation, cryptography, forensics, and reconnaissance, the same skills that carry straight into the Coast Guard's cyber mission.</p>
+          <div class="tags">
+            <span class="tag">Capture the Flag</span>
+            <span class="tag">National Cyber League</span>
+            <span class="tag">Web exploitation</span>
+            <span class="tag">Cryptography</span>
+            <span class="tag">Forensics</span>
           </div>
-        <h1>Alex Ortiz</h1>
-        <img src="images/tennis.JPEG" alt="Profile Pic" id="profilePic">
-    </header>
-    <main id="homeMain">
-        <div id="responsive">
-            <div class="homepagecontainers">
-                <p class="homepageparagraph">I like building cool electronics and stuff like my computer which my dad built 10 years ago and then he and I upgraded and refurnished it</p>
-                <img src="images/computer.jpeg" alt="computer" class="homepagepics">
-            </div>
-            <div class="homepagecontainers">
-                <p class="homepageparagraph">I have been in scouts since I was 6 years old and have gone on lots of campouts. I learned many leadership skills and basic life skills.</p>
-                <img src="images/scouts.JPEG" alt="" class="homepagepics">
-            </div>
         </div>
-        <div class="homepagecontainers">
-            <p class="homepageparagraph">Hypixel skyblock is my favorite Minecraft game I could ramble about this for hours but I will spare you anyway it is a cool game that involves stratagy</p>
-            <img src="images/minecraft.jpg" alt="" class="homepagepics">
+        <div class="card stat">
+          <span class="big">10th</span>
+          <span class="label">NCL Experienced bracket</span>
+          <span class="sub">Fall 2026 season, out of thousands of competitors.</span>
         </div>
-        <div class="homepagecontainers">
-            <p class="homepageparagraph">Kirby is my favorite character in Super Smash Bros and I have trained an amazingly good Kirby amibo which I have named Pink Death. I have cleared world of light and main Kirby</p>
-            <img src="images/kirby_amibo.jpeg" alt="" class="homepagepics">
+      </div>
+      <div class="hackathon">
+        <div class="shot"><img src="images/hackathon.jpg" alt="Alejandro's team accepting a first-place hackathon award"></div>
+        <div class="note">
+          <h3>First place, NOAC hackathon</h3>
+          <p>My team took first at the 2024 National Order of the Arrow Conference hackathon, an early sign of the competitive coding work I do now.</p>
         </div>
-        <div class="homepagecontainers">
-            <p class="homepageparagraph">My family has adopted 3 very friendly outdoor cats that used to be feral. Their names are Tigs, Daisy, and Mama cat. I know the last one might not have been the most creative but oh well.</p>
-            <img src="images/cat_potrait.jpeg" alt="cat potrait" class="homepagepics">
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <p class="eyebrow">Projects</p>
+      <h2>Tools I've built</h2>
+      <div class="projects-grid">
+
+        <a class="card project" href="https://memocraft.aortiz.org" target="_blank" rel="noopener">
+          <h3>MemoCraft</h3>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Word / PDF export</span></div>
+          <p>A Coast Guard memorandum generator. Cadets fill in the header, body, references, and distribution, and it produces a regulation-correct memo that exports to Word or PDF.</p>
+          <span class="link">memocraft.aortiz.org &rarr;</span>
+        </a>
+
+        <a class="card project" href="https://study.aortiz.org" target="_blank" rel="noopener">
+          <h3>USCGA Boards Practice</h3>
+          <div class="tags"><span class="tag">Study tool</span><span class="tag">Progress tracking</span></div>
+          <p>A drilling app for fourth-class cadets to study the boards packet (ranks, missions, districts, flags, and more) with study, practice, and graded test modes plus mastery tracking.</p>
+          <span class="link">study.aortiz.org &rarr;</span>
+        </a>
+
+        <a class="card project" href="point-tracker.html">
+          <h3>Tennis Point Tracker</h3>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">CSV export</span></div>
+          <p>A match-logging tool that records every point by player, shot, stroke, court zone, and direction, then exports a full match report as CSV for later analysis.</p>
+          <span class="link">Open the tracker &rarr;</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="beyond">
+    <div class="wrap">
+      <p class="eyebrow">Beyond the Academy</p>
+      <h2>The rest of the story</h2>
+      <div class="life">
+
+        <div class="life-item">
+          <div class="life-media"><img src="images/tennis.jpg" alt="Alejandro at a tennis clinic"></div>
+          <div class="life-body">
+            <span class="meta">Seven years, still competing</span>
+            <h3>Tennis</h3>
+            <p>Seven years in and still in love with the sport. It taught me that if you put your mind to something, almost anything is reachable, and someday I'd like to coach and pass that on.</p>
+          </div>
         </div>
-    </main>
+
+        <div class="life-item">
+          <div class="life-media"><img src="images/muaythai.jpg" alt="Alejandro throwing a kick in a Muay Thai match"></div>
+          <div class="life-body">
+            <span class="meta">Two years</span>
+            <h3>Muay Thai</h3>
+            <p>I started training Muay Thai about two years ago and it's become a core part of how I stay sharp. Discipline, conditioning, and the kind of pressure you only learn by sparring.</p>
+          </div>
+        </div>
+
+        <div class="life-item">
+          <div class="life-media"><img src="images/scouting.jpg" alt="A Scout flag ceremony on an open field"></div>
+          <div class="life-body">
+            <span class="meta">Eagle Scout &middot; Order of the Arrow</span>
+            <h3>Scouting and the Order of the Arrow</h3>
+            <p>Scouting shaped most of my leadership. As an Eagle Scout and a member of the Order of the Arrow, I led at the lodge and section level and took on the hardest trips the program offers.</p>
+            <ul class="roles">
+              <li>Lodge Chief</li>
+              <li>Conclave Vice Chief of Trainings</li>
+              <li>OA Trail Crew &middot; Philmont</li>
+              <li>Venturing &amp; Troop leadership</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <div class="contact">
+        <a class="cta" href="https://github.com/alejandro-ortiz" target="_blank" rel="noopener">GitHub</a>
+        <span class="cta" style="border:none;">alex@ortizaggies.com</span>
+      </div>
+      <p class="fine">Built and maintained by Alejandro Ortiz &middot; aortiz.org</p>
+    </div>
+  </footer>
 </body>
+
 </html>
