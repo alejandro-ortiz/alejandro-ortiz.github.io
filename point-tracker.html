@@ -3,33 +3,101 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/my_website.css">
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-    <script src="javascript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Tennis Point Tracker</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Point tracker: reuse the site's tokens; a fixed blue for selected/primary
+           states so white text stays readable in both themes. */
+        :root { --pt-primary: #0d3356; }
+        @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --pt-primary: #2f6fb0; } }
+        :root[data-theme="dark"] { --pt-primary: #2f6fb0; }
+
+        #formMain { padding-block: clamp(2rem, 5vw, 3.5rem); }
+        .tracker-head { max-width: 60ch; margin-bottom: 2rem; }
+        .tracker-head h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
+        .tracker-head p { color: var(--muted); margin: .6rem 0 0; }
+
+        #formcontainer { max-width: 760px; margin-inline: auto; }
+        #TennisForm { display: flex; flex-direction: column; gap: 1rem; margin: 0; }
+
+        #TennisForm fieldset {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1rem 1.25rem 1.25rem;
+            margin: 0;
+            background: var(--bg);
+            box-shadow: var(--shadow);
+        }
+        #TennisForm legend {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0 .4rem;
+        }
+        .labelcontainer { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: .5rem; }
+        .labelcontainer label { flex: 1 1 auto; }
+        #TennisForm label {
+            display: block;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: .6rem .85rem;
+            background: var(--surface);
+            color: var(--fg);
+            text-align: center;
+            font-size: .95rem;
+            cursor: pointer;
+            user-select: none;
+            transition: border-color .15s, background .15s, color .15s;
+        }
+        #TennisForm label:hover { border-color: var(--pt-primary); }
+        #TennisForm input[type="radio"] { display: none; }
+        .checkedinput { background: var(--pt-primary) !important; color: #fff !important; border-color: var(--pt-primary) !important; }
+
+        .formbuttons { display: flex; flex-wrap: wrap; gap: .75rem; margin: .25rem 0 0; }
+        .formbuttons button {
+            flex: 1 1 auto;
+            padding: .8rem 1.25rem;
+            border-radius: 10px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--fg);
+            transition: border-color .15s, background .15s, transform .15s;
+        }
+        .formbuttons button:hover { border-color: var(--pt-primary); }
+        .formbuttons button:active { transform: translateY(1px); }
+        #endpoint { background: var(--pt-primary); color: #fff; border-color: var(--pt-primary); }
+        #downloadreport { margin: 0; }
+    </style>
 </head>
 
 <body>
-    <header id="changedropdown">
-        <div class="dropdown" id="dropdown">
-            <button onclick="dropDownFunction(this)" class="dropbtn" id="dropdownbutton">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="/">Home</a>
-              <a href="/#academy">Academy</a>
-              <a href="/#projects">Projects</a>
-              <a href="/#beyond">Beyond</a>
-              <a href="/point-tracker">Point Tracker</a>
+    <nav>
+        <div class="wrap nav-inner">
+            <a href="/" class="brand">Alejandro <span>Ortiz</span></a>
+            <div class="nav-links">
+                <a href="/#about">About</a>
+                <a href="/#academy">Academy</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#beyond">Beyond</a>
             </div>
-          </div>
-        <h1>Alejandro Ortiz</h1>
-        <img src="images/tennis.JPEG" alt="Profile Pic" id="profilePic">
-    </header>
-    <main id="formMain">
+        </div>
+    </nav>
+
+    <main id="formMain" class="wrap">
+      <div class="tracker-head">
+        <p class="eyebrow">Project</p>
+        <h1>Tennis Point Tracker</h1>
+        <p>Log each point as it happens, then export the full match as a CSV report for later analysis.</p>
+      </div>
       <div id="formcontainer">
         <form id="TennisForm">
             <fieldset>
@@ -39,7 +107,7 @@
                 <label id="label2"><input type="radio" name="q1" value="player2" id="input2">Player2</label>
               </div>
             </fieldset>
-          
+
             <fieldset>
               <legend>What type of shot was hit?</legend>
               <div class="labelcontainer">
@@ -92,5 +160,7 @@
         </form>
       </div>
     </main>
+    <script src="javascript.js"></script>
 </body>
+
 </html>

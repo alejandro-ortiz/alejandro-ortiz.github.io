@@ -3,67 +3,65 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/my_website.css">
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Page Not Found</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="css/main.css">
     <style>
-        p {
-            width: 25%;
-            text-align: center;
-            font-size: 2em;
+        .notfound {
+            min-height: 60vh;
             display: flex;
             flex-direction: column;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 1em;
-            border-width: 5px;
-            border-style: solid;
-            border-color: black;
-            border-top-left-radius: 5em;
-            border-bottom-right-radius: 5em;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 1rem;
         }
-        a {
-            color: goldenrod;
+        .notfound .code {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: clamp(5rem, 18vw, 9rem);
+            line-height: 1;
+            color: var(--navy);
+            letter-spacing: -.02em;
         }
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-            padding: 0px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: black;
-            border-radius: 5em;
-            margin-top: 3em;
+        .notfound h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); }
+        .notfound p { color: var(--muted); max-width: 42ch; margin: 0; }
+        .notfound .home {
+            margin-top: .6rem;
+            font-family: var(--font-mono);
+            font-size: .9rem;
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 2px;
         }
+        .notfound .home:hover { color: var(--fg); border-color: var(--fg); }
     </style>
-    <script src="javascript.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="dropdown" id="dropdown">
-            <button onclick="dropDownFunction(this)" class="dropbtn" id="dropdownbutton">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="/">Home</a>
+    <nav>
+        <div class="wrap nav-inner">
+            <a href="/" class="brand">Alejandro <span>Ortiz</span></a>
+            <div class="nav-links">
+                <a href="/#about">About</a>
                 <a href="/#academy">Academy</a>
                 <a href="/#projects">Projects</a>
                 <a href="/#beyond">Beyond</a>
-                <a href="/point-tracker">Point Tracker</a>
             </div>
-          </div>
-        <h1>Alejandro Ortiz</h1>
-        <img src="images/tennis.JPEG" alt="Profile Pic" id="profilePic">
-    </header>
-    <main>
-        <img src="images/404.jpg" alt="This is not the page that you are looking for" width="50%">
-        <p>Please go back to the <a href="/index.html">home page</a></p>
+        </div>
+    </nav>
+
+    <main class="wrap notfound">
+        <p class="eyebrow">Error</p>
+        <div class="code">404</div>
+        <h1>This isn't the page you're looking for</h1>
+        <p>The page may have moved or never existed. Let's get you back on course.</p>
+        <a class="home" href="/">Return to the home page &rarr;</a>
     </main>
 </body>
 
